@@ -1,13 +1,19 @@
 package world.buff.buffcall.buffcall;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,5 +54,29 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /** Called when the user clicks the Save button */
+    public void onSaveSchedule(View view) {
+/*
+        Context context = getApplicationContext();
+        CharSequence text = "Call is scheduled";
+        int duration = Toast.LENGTH_LONG;
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.show();
+*/
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.content_main,
+                (ViewGroup) findViewById(R.id.toast_layout_save));
+
+        TextView text = (TextView) layout.findViewById(R.id.text);
+        text.setText("Call is scheduled");
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(layout);
+        toast.show();
     }
 }
