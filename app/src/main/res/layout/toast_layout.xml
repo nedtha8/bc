@@ -7,14 +7,16 @@ android:layout_height="fill_parent"
 android:padding="8dp"
 android:background="#DAAA"
     >
-<ImageView android:src="@drawable/add34"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+<ImageView android:src="@drawable/like82"
+    android:layout_width="32dp"
+    android:layout_height="32dp"
     android:layout_marginRight="8dp"
-    />
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    android:layout_gravity="center" />
 <TextView android:id="@+id/text"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:textColor="#FFF"
-    />
+    android:layout_gravity="center" />
 </LinearLayout>

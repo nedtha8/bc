@@ -12,15 +12,28 @@
     tools:context="world.buff.buffcall.buffcall.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/phone_number"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="93dp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_save"
-        android:layout_centerVertical="true"
-        android:onClick="onSaveSchedule" />
+        android:onClick="onSaveSchedule"
+        android:id="@+id/button"
+        android:layout_below="@+id/phone_number"
+        android:layout_marginTop="53dp"
+        android:layout_alignRight="@+id/phone_number"
+        android:layout_alignEnd="@+id/phone_number"
+        android:layout_alignLeft="@+id/phone_number"
+        android:layout_alignStart="@+id/phone_number" />
+
+
 </RelativeLayout>
